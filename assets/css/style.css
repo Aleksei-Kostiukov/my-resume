@@ -426,7 +426,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .section-title h2 {
@@ -508,6 +508,14 @@ section {
 }
 
 /*Скиллы*/
+#cube-container {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 50px;
+  margin-left: 41%;
+  display: block;
+}
+
 .skills .progress {
   height: 60px;
   display: block;

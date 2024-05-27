@@ -1,9 +1,8 @@
-(function() {
-  "use strict";
+import { createCube } from "./cube.js"
+createCube();
 
-  /**
-   * Easy selector helper function
-   */
+function general () {
+
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -220,7 +219,9 @@
 
   new PureCounter();
 
-})()
+}
+
+general();
 // Таймер 
 document.addEventListener("DOMContentLoaded", function () {
   let seconds = 0;
@@ -311,3 +312,4 @@ window.addEventListener('scroll', () => {
       button.style.display = 'block';
   }
 });
+
