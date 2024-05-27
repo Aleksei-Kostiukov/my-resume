@@ -511,9 +511,24 @@ section {
 #cube-container {
   width: 200px;
   height: 200px;
-  margin-bottom: 50px;
-  margin-left: 41%;
-  display: block;
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Светлая тема */
+@media (prefers-color-scheme: light) {
+  #cube-container {
+    background-color: #ffffff; /* Белый фон для светлой темы */
+  }
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  #cube-container {
+    background-color: #333333; /* Темный фон для темной темы */
+  }
 }
 
 .skills .progress {
