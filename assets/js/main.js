@@ -266,9 +266,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Принт резюме
+
 window.jsPDF = window.jspdf.jsPDF;
 
 function Convert_HTML_To_PDF() {
+  console.log('function Convert_HTML_To_PDF()')
   const pdf = new jsPDF({
       orientation: 'p',
       unit: 'mm',
@@ -281,7 +283,7 @@ function Convert_HTML_To_PDF() {
 
   const sections = document.querySelectorAll('section');
 
-  async function addSectionToPDF(section, index) {
+  async function addSectionToPDF(section) {
       const canvas = await html2canvas(section);
       const imgData = canvas.toDataURL('image/png');
       const imgWidth = 210 - 2 * margin;
@@ -305,7 +307,7 @@ function Convert_HTML_To_PDF() {
 
   processSections();
 }
-
+window.Convert_HTML_To_PDF = Convert_HTML_To_PDF;
 window.addEventListener('scroll', () => {
   const button = document.getElementById('printButton');
   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) { 
